@@ -1,8 +1,5 @@
 .bd-toc {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 4rem;
-    height: calc(100vh - 4rem);
+        height: calc(100vh - 4rem);
     overflow-y: auto;
     order: 2;
     margin-top: 1.5rem;
@@ -29,6 +26,7 @@ contentp {
 }
 
 .section-nav {
+    position: fixed;
     padding-left: 0;
     border-left: 1px solid #eee;
     list-style:none;
