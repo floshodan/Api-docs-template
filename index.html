@@ -16,37 +16,11 @@
             <div class="col-12 col-md-3 col-xl-2 sidebar">
                 <nav class="nav flex-column">
                 <input class="form-control d-flex align-items-center" type="text" placeholder="Search" aria-label="Search">
-                <ul class="side-menu">
-                    <li>
-                        <a class="p-1 nav-link active"  href="#">Active</a>
-                        <div class="collapse-menu" style="display:block;">
-                            <ul class="sub-menu">
-                                <li><a href="#">Submenu</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                    <a class="p-1 nav-link"  href="#">Active</a>
-                    <div class="collapse-menu" style="display:none;">
-                        <ul class="sub-menu">
-                            <li><a href="#">Submenu</a></li>
-                            </ul>
-                            </div>
-                    </li>
-                        <li>
-                            <a class="p-1 nav-link" href="#">Active</a>
-                            <div class="collapse-menu" style="display:none;">
-                                <ul class="sub-menu">
-                                    <li><a href="#">Submenu</a></li>
-                                </ul>
-                            </div>
-                            </li>
-
+                <ul class="side-menu" id="side-menu">
                 </ul>
                 </nav>
-            </div> 
+            </div>
             <script>
-             
                 let extend = document.getElementsByClassName('nav-link');
                 let active = []
                     for(let i = 0; i< extend.length; i++){
@@ -66,30 +40,47 @@
                     });
                     }
             </script>
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                   <li class="toc-entry toc-h2"><a href="#quick-start">Quick start</a>
-                     <ul class="toc-ul">
-                        <li class="toc-entry"><a href="#css">CSS</a></li>
-                        <li class="toc-entry"><a href="#js">JS</a></li>
-                     </ul>
-                   </li>
-                    <li class="toc-entry"><a href="#starter-template">Starter template</a></li>
-                    <li class="toc-entry"><a href="#important-globals">Important globals</a>
-                    <ul class="toc-ul">
-                        <li class="toc-entry"><a href="#html5-doctype">HTML5 doctype</a></li>
-                        <li class="toc-entry"><a href="#responsive-meta-tag">Responsive meta tag</a></li>
-                        <li class="toc-entry"><a href="#box-sizing">Box-sizing</a></li>
-                        <li class="toc-entry"><a href="#reboot">Reboot</a></li>
-                    </ul>
-                    </li>
-                    </ul>
+            <div class="d-none d-xl-block col-xl-2 bd-toc" id="toc">
+                <ul class="section-nav" id="section-nav">
+                </ul>
             </div>
             <main class="col-12 col-md-9 col-xl-8 contentp">
+                <section>
                 <h1 id="content">Introduction</h1>
                 <p>Yes! You heard right this website has a public API. It can be used to receive personal data from the owner of this website as well as serverinformation from the server this webapplication is hosted. The documantion has some example code in different languages so its easy understandble for every developer. Enjoy! </p>
                 <h2>Get started</h2>
-                <h6>Data Endpoint</h6> 
+                <p>The REST API provides public data accessible to any client aanonymously, as well as a authentification for the admin of the site only! For posting data to the server.</p>
+                <p>The REST API uses JSON exclusively as the request as well as response format, including errors. The responses are also fully dicoverable via hyperlinks when dealing with the responses. </p>
+                <h3>Data Endpoint Reference</h3> 
+ <div class="table-responsive">
+              <table class="table-bordered">
+                <thead class="black">
+                  <tr>
+                    <th>Resource</th>
+                    <th>Base Route</th>
+                    <th>Endpoint</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a name="contactName"></a>About</td>
+                      <td><code>/api/about</code></td>
+                      <td>GET/POST</td>
+                   </tr>
+                    <tr>
+                     <td><a name="contactUrl"></a>url</td>
+                     <td><code>string</code></td>
+                     <td>The URL pointing to the contact information. MUST be in the format of a URL.</td>
+                    </tr>
+                     <tr>
+                       <td><a name="contactEmail"></a>email</td>
+                       <td><code>string</code></td>
+                       <td>The email address of the contact person/organization. MUST be in the format of an email address.</td>
+                     </tr>
+                  </tbody>
+               </table>
+                </div>
+
                 <div class="get">
                     <p>get</p> 
                 </div>
@@ -167,6 +158,7 @@ print(json_response)
                      </tr>
                   </tbody>
                </table>
+                </div>
                <pre><code class="language-json"> [
     {
         "firstname": "Florian",
@@ -182,9 +174,41 @@ print(json_response)
         "online": true
     }
 ]</code></pre>
-                </div>
-
-            <main>
+               <h2>Hey I'm h2</h2>
+                </section>
+                <section id="2">
+                    <h1 id="section2">AAAA</h1>
+                    <h1>bbbb</h1>
+                    <h1>asdf</h1>
+                    <h1>Test</h1>
+                    <h2>Here is another test</h2>
+                    <h2>Hi whats going on!</h2>
+                    <h3> I'm h3 and you?</h3>
+                    <h3> me too hihi</h3>
+                    <h2> Nothing Much! </h2>
+                    <h2> YO </h2>
+                    <h3>Hihi</h3>
+                    <h1> Another Test! </h1>
+                </section>
+                <section id="3">
+                    <p> ASDASDASDasdfjkafakfjkaljflkaj</p>
+                    <h2> Hallo blabablabla</h2>
+                    <h1> Heeey!! </h1>
+                    <h1>bbbb</h1>
+                    <h1>asdf</h1>
+                    <h1>Test</h1>
+                    <h2>Here is another test</h2>
+                    <h2>Hi whats going on!</h2>
+                    <h3> I'm h3 and you?</h3>
+                    <h3> me too hihi</h3>
+                    <h2> Nothing Much! </h2>
+                    <h2> YO </h2>
+                    <h3>Hihi</h3>
+                    <h1> Another Test! </h1>
+                </section>
+                <section>
+                    
+                </section>
         </div>
     </div>
 
@@ -193,5 +217,6 @@ print(json_response)
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script src="prism.js"></script>
+<script src="app.js"></script>
 </body>
 </html> 
