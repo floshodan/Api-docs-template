@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-3 col-xl-2 sidebar">
-                <nav class="nav flex-column">
+                <nav class="nav flex-column" style="position: fixed;">
                 <input class="form-control d-flex align-items-center" type="text" placeholder="Search" aria-label="Search">
                 <ul class="side-menu" id="side-menu">
                 </ul>
@@ -59,6 +59,7 @@
                     <th>Resource</th>
                     <th>Base Route</th>
                     <th>Endpoint</th>
+                    <th>Info</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -66,25 +67,22 @@
                       <td><a name="contactName"></a>About</td>
                       <td><code>/api/about</code></td>
                       <td>GET/POST</td>
+                      <td>Retrieve information about the website owner</td>
                    </tr>
                     <tr>
-                     <td><a name="contactUrl"></a>url</td>
-                     <td><code>string</code></td>
-                     <td>The URL pointing to the contact information. MUST be in the format of a URL.</td>
+                     <td><a name="contactUrl"></a>Serverinfo</td>
+                     <td><code>/api/serverinfo</code></td>
+                     <td>GET</td>
+                     <td>Receive information about the webserver this webservices is hosted on</td>
                     </tr>
-                     <tr>
-                       <td><a name="contactEmail"></a>email</td>
-                       <td><code>string</code></td>
-                       <td>The email address of the contact person/organization. MUST be in the format of an email address.</td>
-                     </tr>
-                  </tbody>
+               </tbody>
                </table>
                 </div>
-
+                <h2>About: Get</h2>
                 <div class="get">
                     <p>get</p> 
                 </div>
-                <pre><code class="language-own">http://floshodan.io/api/about</code></pre>
+                <pre><code class="language-own">https://floshodan.io/api/about</code></pre>
   <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" data-toggle="tab" href="#curl">Curl</a>
@@ -99,12 +97,12 @@
 
   <div class="tab-content">
     <div id="curl" class="container-fluid tab-pane active">
-        <pre><code class="language-shell">curl http://floshodan.io/api/about | jq '.'</code></pre>
+        <pre><code class="language-shell">curl https://floshodan.io/api/about | jq '.'</code></pre>
     </div>
     <div id="nodejs" class="container-fluid tab-pane fade">
         <pre><code class="language-javascript">const https = require('http');
 
-https.get('http://floshodan.io/api/about', (resp) => {
+https.get('https://floshodan.io/api/about', (resp) => {
   let data = '';
 
   resp.on('data', (chunk) => {
@@ -123,7 +121,7 @@ https.get('http://floshodan.io/api/about', (resp) => {
     <div id="python" class="container-fluid tab-pane fade">
         <pre><code class="language-python">import requests
 
-response = requests.get('http://floshodan.io/api/about')
+response = requests.get('https://floshodan.io/api/about')
 json_response = response.json()
 print(json_response)
 
@@ -174,42 +172,13 @@ print(json_response)
         "online": true
     }
 ]</code></pre>
-               <h2>Hey I'm h2</h2>
                 </section>
                 <section id="2">
-                    <h1 id="section2">AAAA</h1>
-                    <h1>bbbb</h1>
-                    <h1>asdf</h1>
-                    <h1>Test</h1>
-                    <h2>Here is another test</h2>
-                    <h2>Hi whats going on!</h2>
-                    <h3> I'm h3 and you?</h3>
-                    <h3> me too hihi</h3>
-                    <h2> Nothing Much! </h2>
-                    <h2> YO </h2>
-                    <h3>Hihi</h3>
-                    <h1> Another Test! </h1>
-                </section>
-                <section id="3">
-                    <p> ASDASDASDasdfjkafakfjkaljflkaj</p>
-                    <h2> Hallo blabablabla</h2>
-                    <h1> Heeey!! </h1>
-                    <h1>bbbb</h1>
-                    <h1>asdf</h1>
-                    <h1>Test</h1>
-                    <h2>Here is another test</h2>
-                    <h2>Hi whats going on!</h2>
-                    <h3> I'm h3 and you?</h3>
-                    <h3> me too hihi</h3>
-                    <h2> Nothing Much! </h2>
-                    <h2> YO </h2>
-                    <h3>Hihi</h3>
-                    <h1> Another Test! </h1>
-                </section>
-                <section>
-                    
-                </section>
-        </div>
+                    <h1 id="section2">Examples</h1>
+               </section>
+               <section id="3">
+               </section>
+          </div>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
