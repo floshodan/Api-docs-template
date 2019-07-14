@@ -1,4 +1,17 @@
 // Constructor to create li items
+$(document).ready(function(){
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('body,html').animate({
+                scrollTop: $(hash).offset().top
+            }, 1400, function(){
+                window.location.hash = hash;
+            });
+        }
+    });
+});
 
 
 function List(headers){
